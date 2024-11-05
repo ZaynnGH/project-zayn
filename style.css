@@ -1,0 +1,127 @@
+body {
+    background-color: #000; /* Latar belakang hitam */
+    color: #fff; /* Warna teks putih */
+    font-family: Arial, sans-serif; /* Font sans-serif */
+    margin: 0; /* Menghilangkan margin default */
+    padding: 0; /* Menghilangkan padding default */
+}
+
+.header {
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    justify-content: space-between; /* Menyebar elemen header */
+    align-items: center; /* Mengatur elemen di tengah secara vertikal */
+    padding: 10px 15px; /* Padding atas-bawah dan kiri-kanan */
+    background-color: #141414; /* Latar belakang header */
+    position: sticky; /* Membuat header tetap di atas saat menggulir */
+    top: 0; /* Jarak dari atas */
+    z-index: 100; /* Menempatkan di atas elemen lain */
+}
+
+.header img {
+    width: 30px; /* Ukuran logo */
+}
+
+.categories {
+    display: flex; /* Menggunakan flexbox untuk kategori */
+    gap: 20px; /* Jarak antar kategori */
+    font-size: 16px; /* Ukuran font kategori */
+}
+
+.categories span {
+    cursor: pointer; /* Menunjukkan bahwa ini dapat diklik */
+}
+
+.categories span:hover {
+    color: #e50914; /* Warna teks saat hover */
+}
+
+.gallery-section {
+    padding: 20px; /* Padding di sekitar section */
+}
+
+.gallery-section h2 {
+    margin: 0; /* Menghilangkan margin untuk judul */
+    padding: 10px 0; /* Padding atas-bawah */
+    font-size: 1.5em; /* Ukuran font judul */
+}
+
+.gallery-row {
+    display: flex; /* Menggunakan flexbox untuk baris galeri */
+    gap: 10px; /* Jarak antar gambar */
+    overflow-x: auto; /* Mengizinkan pengguliran horizontal */
+    padding: 10px 0; /* Padding di sekitar baris */
+    scrollbar-width: none; /* Menghilangkan scrollbar di Firefox */
+}
+
+.gallery-row::-webkit-scrollbar {
+    display: none; /* Menghilangkan scrollbar di Chrome */
+}
+
+.gallery-row img {
+    height: 150px; /* Tinggi gambar */
+    width: 100px; /* Lebar gambar */
+    border-radius: 5px; /* Membuat sudut gambar melengkung */
+    transition: transform 0.3s, box-shadow 0.3s; /* Efek transisi untuk hover */
+    cursor: pointer; /* Menunjukkan bahwa gambar dapat diklik */
+}
+
+.gallery-row img:hover {
+    transform: scale(1.1); /* Membesarkan gambar saat hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Efek bayangan saat hover */
+}
+
+.bottom-nav {
+    display: flex; /* Menggunakan flexbox untuk navigasi bawah */
+    justify-content: space-around; /* Menyebar elemen navigasi */
+    padding: 10px; /* Padding di sekitar navigasi */
+    background-color: #141414; /* Latar belakang navigasi */
+    position: fixed; /* Membuat navigasi tetap di bawah */
+    bottom: 0; /* Jarak dari bawah */
+    width: 100%; /* Lebar penuh */
+}
+
+.bottom-nav div {
+    text-align: center; /* Mengatur teks di tengah */
+    font-size: 12px; /* Ukuran font untuk teks di navigasi */
+}
+
+.bottom-nav img {
+    width: 25px; /* Ukuran ikon navigasi */
+    height: 25px; /* Ukuran ikon navigasi */
+}
+
+.games-section {
+    background-color: #1f1f1f; /* Latar belakang untuk bagian game */
+    padding: 20px; /* Padding di sekitar section */
+}
+
+.games-section h3 {
+    color: #e50914; /* Warna judul bagian game */
+    margin: 0 0 10px; /* Mengatur margin untuk judul */
+}
+
+.games-row {
+    display: flex; /* Menggunakan flexbox untuk baris game */
+    gap: 10px; /* Jarak antar gambar game */
+    overflow-x: auto; /* Mengizinkan pengguliran horizontal */
+}
+
+.games-row img {
+    width: 100px; /* Lebar gambar game */
+    height: 100px; /* Tinggi gambar game */
+    border-radius: 5px; /* Membuat sudut gambar melengkung */
+    transition: transform 0.3s; /* Efek transisi untuk hover */
+    cursor: pointer; /* Menunjukkan bahwa gambar dapat diklik */
+}
+
+.games-row img:hover {
+    transform: scale(1.1); /* Membesarkan gambar saat hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Efek bayangan saat hover */
+}
+
+@media (min-width: 768px) {
+    .gallery-row img, .games-row img {
+        height: 200px; /* Tinggi gambar pada layar lebih besar */
+        width: 140px; /* Lebar gambar pada layar lebih besar */
+    }
+}
